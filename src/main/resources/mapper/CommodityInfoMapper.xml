@@ -1,0 +1,12 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.ssm.dao.CommodityInfoMapper">
+     <insert id="insertItem" parameterType="com.ssm.bean.CommodityInfo">
+         INSERT INTO  commodity_info (itemName,supplierName,price,amount) value(#{itemName},#{supplierName},#{price},#{amount})
+     </insert>
+    <select id="getAllItem" resultType="com.ssm.bean.CommodityInfo">
+        select id,itemName FROM commodity_info
+    </select>
+</mapper>

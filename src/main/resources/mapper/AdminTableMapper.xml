@@ -1,0 +1,13 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.ssm.dao.AdminTableMapper">
+        <select id="selectAdminByUserName" resultType="com.ssm.bean.AdminTable">
+          select id,user_name,password,jurisdiction from admin_table where user_name like #{userName}
+        </select>
+
+        <select id="selectAdminByNumber" resultType="int" parameterType="com.ssm.bean.AdminTable">
+            select count(*) from admin_table where user_name = #{userName} and password = #{password}
+        </select>
+</mapper>

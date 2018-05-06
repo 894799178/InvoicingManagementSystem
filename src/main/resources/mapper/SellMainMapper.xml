@@ -1,0 +1,11 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.ssm.dao.SellMainMapper">
+
+    <insert id="insertSellRecord" parameterType="com.ssm.bean.SellMain">
+        INSERT INTO  sell_main (item_id,sell_item_amount,sell_money) VALUE (#{itemId},#{sellItemAmount},#{sellMoney})
+    </insert>
+
+</mapper>
